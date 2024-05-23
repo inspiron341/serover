@@ -1,0 +1,45 @@
+{
+  "series": 3,
+  "maps": [
+    {
+      "type": "Ban",
+      "map": "Breeze",
+      "pick": "team1"
+    },
+    {
+      "type": "Ban",
+      "map": "Icebox",
+      "pick": "team2"
+    },
+    {
+      "type": "Pick",
+      "map": "Ascent",
+      "pick": "team1",
+      "side": "attack",
+      "sidePick": "team2"
+    },
+    {
+      "type": "Pick",
+      "map": "Split",
+      "pick": "team2",
+      "side": "attack",
+      "sidePick": "team1"
+    },
+    {
+      "type": "Ban",
+      "map": "Bind",
+      "pick": "team1"
+    },
+    {
+      "type": "Ban",
+      "map": "Haven",
+      "pick": "team2"
+    },
+    {
+      "type": "Decider",
+      "map": "Fracture",
+      "side": "attack",
+      "sidePick": "team2"
+    }
+  ]
+}
