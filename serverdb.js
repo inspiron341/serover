@@ -55,6 +55,25 @@ const sendSSE = (data) => {
     client.res.write(`data: ${JSON.stringify(data)}\n\n`);
   });
 };
+
+app.get("/del-data", (req, res) => {
+  const deleteQueries = [
+      "DELETE FROM match",
+      "DELETE FROM player",
+      "DELETE FROM matchupdetails"
+  ];
+
+  deleteQueries.forEach(query => {
+      db.run(query, function(error) {
+          if (error) {
+              console.error("Error deleting rows:", error.message);
+              return;
+          }
+          console.log("Rows deleted successfully from:", query);
+      });
+  });
+});
+
 // POST endpoint to receive data
 app.post("/data", (req, res) => {
   const eventData = req.body; // Assuming the data sent is in the request body
