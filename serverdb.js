@@ -60,7 +60,7 @@ app.get("/del-data", (req, res) => {
   const deleteQueries = [
       "DELETE FROM match",
       "DELETE FROM player",
-      "DELETE FROM matchupdetails"
+      
   ];
 
   deleteQueries.forEach(query => {
@@ -72,6 +72,7 @@ app.get("/del-data", (req, res) => {
           console.log("Rows deleted successfully from:", query);
       });
   });
+  res.json({"Done":"Dele Success"})
 });
 
 // POST endpoint to receive data
